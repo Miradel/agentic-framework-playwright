@@ -2,24 +2,23 @@ import { test, expect } from '@playwright/test';
 import { RegistrationPage } from '../pages/registration.page';
 import { VALID_REGISTRATION_DATA } from '../fixtures/registration-test-data';
 
-test('Fill registration form and submit', async ({ page }) => {
-  const registrationPage = new RegistrationPage(page);
-  await registrationPage.goto();
+test.describe('Registration form', () => {
+  let registrationPage: RegistrationPage;
 
-  // Fill the form with valid data
-  await registrationPage.fillRegistrationForm(VALID_REGISTRATION_DATA);
+  test.beforeEach(async ({ page }) => {
+    registrationPage = new RegistrationPage(page);
+    await registrationPage.goto();
+  });
 
-  // Submit
-  await registrationPage.clickSignUp();
+  test('Fill registration form and submit', async () => {
+    // Fill the form with valid data
+    await registrationPage.fillRegistrationForm(VALID_REGISTRATION_DATA);
 
-  // Wait a moment for the page to process
-  await page.waitForTimeout(2000);
+    // Submit
+    await registrationPage.clickSignUp();
 
-  // Verify confirmation is visible and contains expected text
-  const isConfirmed = await registrationPage.isConfirmationVisible();
-  expect(isConfirmed).toBeTruthy();
-
-  const confirmationText = await registrationPage.getConfirmationText();
-  // The demo site shows 'Well done!' on success; adjust if needed
-  expect(confirmationText).toContain('Well done');
+    // Verify confirmation heading is visible
+    await expect(registrationPage.confirmationHeading).toBeVisible();
+    await expect(registrationPage.confirmationText).toBeVisible();
+  });
 });

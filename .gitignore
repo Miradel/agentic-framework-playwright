@@ -36,6 +36,10 @@ coverage/
 *.swp
 *.swo
 
+# Playwright test artifacts
+test-results/
+allure-results/
+
 # Project structure explanations
 # .clinerules – contains architecture, coding standards, and other rule documents governing the framework.
 # .cline/agents – markdown definitions of major agents, each handling a specific responsibility in the automation pipeline.
