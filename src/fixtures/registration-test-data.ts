@@ -61,7 +61,7 @@ export const GENDER_OPTIONS = ['Male', 'Female', 'Other'] as const;
 export const DEPARTMENT_OPTIONS = [
   'Department of Engineering',
   'Department of Agriculture',
-  "Accounting Office",
+  'Accounting Office',
   "Tresurer's Office",
   'MPDC',
   'MCTC',

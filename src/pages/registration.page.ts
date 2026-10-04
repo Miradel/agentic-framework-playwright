@@ -239,11 +239,9 @@ export class RegistrationPage {
   async clickSignUp(): Promise<void> {
     await this.signUpButton.click();
     // Wait for navigation to the confirmation page
-    await this.page
-      .waitForURL('**/registration_confirmation', { timeout: 10_000 })
-      .catch(() => {
-        // If navigation doesn't complete, the test will fail on verification
-      });
+    await this.page.waitForURL('**/registration_confirmation', { timeout: 10_000 }).catch(() => {
+      // If navigation doesn't complete, the test will fail on verification
+    });
   }
 
   /**

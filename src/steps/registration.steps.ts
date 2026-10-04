@@ -106,12 +106,9 @@ When('the user selects the job title {string}', async function (jobTitle: string
 /**
  * When: User selects the programming language
  */
-When(
-  'the user selects the programming language {string}',
-  async function (language: string) {
-    await registrationPage.selectProgrammingLanguage(language);
-  },
-);
+When('the user selects the programming language {string}', async function (language: string) {
+  await registrationPage.selectProgrammingLanguage(language);
+});
 
 /**
  * When: User clicks the Sign up button
@@ -131,10 +128,7 @@ Then('the user should see a successful registration confirmation', async functio
 /**
  * Then: User should be redirected to the registration confirmation page
  */
-Then(
-  'the user should be redirected to the registration confirmation page',
-  async function () {
-    const currentUrl = await registrationPage.getCurrentUrl();
-    expect(currentUrl).toContain('registration_confirmation');
-  },
-);
+Then('the user should be redirected to the registration confirmation page', async function () {
+  const currentUrl = await registrationPage.getCurrentUrl();
+  expect(currentUrl).toContain('registration_confirmation');
+});
