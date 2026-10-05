@@ -12,7 +12,8 @@ test.describe('Example feature', () => {
     await pageObj.goto();
   });
 
-  test('should perform login and close component', async () => {
+  // Skip by default – this template test requires a local dev server.
+  test.skip('should perform login and close component', async () => {
     await pageObj.clickLogin();
     await expect(pageObj.loginButton).toBeVisible();
 

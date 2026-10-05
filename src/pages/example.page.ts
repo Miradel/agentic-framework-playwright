@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 /**
  * Example Page Object.
@@ -13,11 +13,12 @@ export class ExamplePage {
   // -----------------------------------------------------------------
   // Locators – use highest‑priority selector per .clinerules/locator-rules.md
   // -----------------------------------------------------------------
-  readonly loginButton = this.page.getByRole('button', { name: 'Login' });
+  readonly loginButton: Locator;
   // Add more locators here
 
   constructor(page: Page) {
     this.page = page;
+    this.loginButton = page.getByRole('button', { name: 'Login' });
   }
 
   /** Navigate to the page */
