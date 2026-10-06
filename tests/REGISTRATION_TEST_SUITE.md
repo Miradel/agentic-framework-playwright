@@ -11,19 +11,19 @@ This test suite provides comprehensive coverage for the user registration form o
 
 ## Valid Registration Data
 
-| Field                 | Value                        |
-| --------------------- | ---------------------------- |
-| First Name            | `John`                       |
-| Last Name             | `Doe`                        |
-| Username              | `johndoe`                    |
-| Email                 | `john.doe@example.com`       |
-| Password              | `SecurePass123!`             |
-| Phone Number          | `571-555-1234`               |
-| Gender                | `Male`                       |
-| Date of Birth         | `01/15/1990`                 |
-| Department            | `Department of Engineering`  |
-| Job Title             | `SDET`                       |
-| Programming Language  | `JavaScript`                 |
+| Field                | Value                       |
+| -------------------- | --------------------------- |
+| First Name           | `John`                      |
+| Last Name            | `Doe`                       |
+| Username             | `johndoe`                   |
+| Email                | `john.doe@example.com`      |
+| Password             | `SecurePass123!`            |
+| Phone Number         | `571-555-1234`              |
+| Gender               | `Male`                      |
+| Date of Birth        | `01/15/1990`                |
+| Department           | `Department of Engineering` |
+| Job Title            | `SDET`                      |
+| Programming Language | `JavaScript`                |
 
 ## File Structure
 
@@ -246,11 +246,11 @@ npm run allure:serve
 
 ## Test Coverage
 
-| Category           | Count | Coverage                                 |
-| ------------------ | ----- | ---------------------------------------- |
-| Positive Scenarios | 1     | Successful end-to-end registration flow  |
-| Cross-Browser      | 3     | Chromium, Firefox, WebKit                |
-| **Total (spec)**   | **3** | **Comprehensive**                        |
+| Category           | Count | Coverage                                |
+| ------------------ | ----- | --------------------------------------- |
+| Positive Scenarios | 1     | Successful end-to-end registration flow |
+| Cross-Browser      | 3     | Chromium, Firefox, WebKit               |
+| **Total (spec)**   | **3** | **Comprehensive**                       |
 
 ## Best Practices Applied
 
@@ -264,7 +264,7 @@ npm run allure:serve
 ✅ **Error Handling** - Graceful catch on confirmation navigation wait  
 ✅ **Reusable Methods** - `fillRegistrationForm()` aggregates all field actions  
 ✅ **Auto-waiting** - Playwright's auto-waiting, no explicit `waitForTimeout`  
-✅ **Networkidle Navigation** - `waitUntil: 'networkidle'` for full page load  
+✅ **Networkidle Navigation** - `waitUntil: 'networkidle'` for full page load
 
 ## Coding Standards Compliance
 
