@@ -28,8 +28,9 @@ coverage/
 .env.*
 # MacOS files
 .DS_Store
-# VS Code
-.vscode/
+# VS Code (keep shared settings for Cucumber extension)
+.vscode/*
+!.vscode/settings.json
 # IDEA
 .idea/
 # Misc
